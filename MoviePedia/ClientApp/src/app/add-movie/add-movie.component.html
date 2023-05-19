@@ -1,0 +1,23 @@
+<div>
+  <div class="form-group">
+    <label>Movie name</label>
+    <input class="form-control" name="enteredMovieName" [(ngModel)]="enteredMovieName" />
+  </div>
+  <div class="form-group">
+    <label>Picture url</label>
+    <input type="number" class="form-control" name="enteredPictureUrl" [(ngModel)]="enteredPictureUrl" />
+  </div>
+  <div class="form-group">
+    <label>Rating</label>
+    <input type="number" class="form-control" name="enteredRating" [(ngModel)]="enteredRating" />
+  </div>
+  <div class="form-group">
+    <label>Genre</label>
+    <select class="form-control" name="selectedGenre" [(ngModel)]="selectedGenre">
+      <option *ngFor="let genre of genres" [value]="genre.id">{{genre.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-default" (click)="addMovie()">Add</button>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div *ngIf="movie | async as currentMovie">
+  <h1>Name: {{currentMovie.name}}</h1>
+  <h1>Genre: {{currentMovie.genre}}</h1>
+  <h1>Rating: {{currentMovie.rating}}</h1>
+  <img src="{{currentMovie.pictureUrl}}" alt="some image"/>
+
+  <button (click)="deleteMovie()" class="btn-primary btn">Delete movie</button>
+</div>

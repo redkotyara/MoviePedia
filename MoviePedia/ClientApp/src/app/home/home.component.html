@@ -1,0 +1,4 @@
+<ul *ngFor="let genre of this.movies; trackBy: trackBy">
+  <li (click)="redirectToMovieDetails(genre.id)">{{genre.name}}</li>
+</ul>
+<button class="btn btn-primary" [routerLink]="'/addmovie'">Add movie</button>
